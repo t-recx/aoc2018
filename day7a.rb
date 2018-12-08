@@ -1,9 +1,5 @@
 #!/usr/bin/env ruby
 
-def select steps
-  steps.select { |x| steps.none? { |y| y[1] == x[0] } }.map { |x| x[0] }.sort
-end
-
 steps = File.readlines(ARGV[0]).map {|l| l.split(' ') }.map { |t| [t[1], t[7]] }
 
 requirements = {}
